@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #f8fafc;
+      color: #333;
+    }
+
+    header {
+      background-color: #003664;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(rgba(0, 54, 100, 0.7), rgba(0, 54, 100, 0.7)),
+        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1500&q=80")
+          center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      max-width: 600px;
+    }
+
+    .hero button {
+      background-color: #ffcc00;
+      color: #003664;
+      border: none;
+      padding: 15px 35px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .hero button:hover {
+      background-color: #ffd633;
+      transform: translateY(-3px);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 60px 40px;
+      background-color: white;
+      text-align: center;
+    }
+
+    .feature {
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f9fafb;
+    }
+
+    .feature h3 {
+      color: #003664;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: #555;
+    }
+
+    footer {
+      background-color: #003664;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BrandName</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h2>Build Something Amazing Today</h2>
+    <p>
+      Create your perfect online presence with our modern, responsive designs.
+      Fast, clean, and built to impress your visitors.
+    </p>
+    <button onclick="scrollToFeatures()">Get Started</button>
+  </section>
+
+  <section class="features" id="features">
+    <div class="feature">
+      <h3>Fast & Responsive</h3>
+      <p>Optimized for all devices, ensuring a smooth experience everywhere.</p>
+    </div>
+    <div class="feature">
+      <h3>Easy to Customize</h3>
+      <p>Flexible structure lets you personalize every detail quickly.</p>
+    </div>
+    <div class="feature">
+      <h3>Modern Design</h3>
+      <p>Clean, minimal, and professional design that stands out.</p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>© 2025 BrandName. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function scrollToFeatures() {
+      document.getElementById("features").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
